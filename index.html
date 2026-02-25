@@ -119,9 +119,6 @@
           <span class="badge" title="Quick tip">
             <span aria-hidden="true">⌘</span> + <span class="kbd">P</span> to print
           </span>
-          <span class="badge" title="Uses conservative, attainable tiers—not elite powerlifting cutoffs">
-            Attainable tiers
-          </span>
           <button
             id="resetBtn"
             class="px-4 py-2 rounded-2xl bg-cc-card shadow-soft ring-1 ring-black/5 font-extrabold hover:shadow-glow transition"
@@ -258,10 +255,7 @@
                   Search an exercise, or use the categories. Then you’ll see tier targets + working weights.
                 </p>
               </div>
-              <div class="flex gap-2">
-                <span id="ageFactorBadge" class="badge">Age factor: —</span>
-                <span id="sexFactorBadge" class="badge">Sex factor: —</span>
-              </div>
+              <div class="flex gap-2"><span id="sexFactorBadge" class="badge">Sex factor: —</span></div>
             </div>
           </div>
 
@@ -344,7 +338,7 @@
               <div class="p-4 border-b border-black/5 flex flex-wrap items-center justify-between gap-2">
                 <div>
                   <div class="font-heading font-extrabold">Tier targets</div>
-                  <div class="text-sm opacity-70">Conservative, “average joe” attainable tiers.</div>
+                  <div class="text-sm opacity-70">Baseline multipliers you can tune in code.</div>
                 </div>
                 <span id="exerciseMeta" class="badge">—</span>
               </div>
@@ -403,13 +397,6 @@
                   0.75× squat” style relationship).
                 </li>
                 <li>Sex factor: females default to ~0.75 of male targets (you can change this in code).</li>
-                <li>
-                  Age factor: peak ~25–35, then gentle decline (about 1% per year after 35; slightly reduced under 20).
-                </li>
-                <li>
-                  These tiers are not “elite standards.” They’re meant to be ambitious but realistic for consistent
-                  training.
-                </li>
               </ul>
             </div>
           </div>
@@ -968,9 +955,7 @@
 
         // Factors
         const sexFactor = getSexFactor(sex);
-        const ageFactor = getAgeFactor(age);
         $("sexFactorBadge").textContent = `Sex factor: ${Math.round(sexFactor * 100)}%`;
-        $("ageFactorBadge").textContent = `Age factor: ${Math.round(ageFactor * 100)}%`;
 
         // Exercise list filter
         const category = $("category").value;
