@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chasing Change — 1RM Standards Calculator</title>
+    <title>Chasing Change — 1 Rep Max Calculator</title>
     <meta
       name="description"
-      content="Estimate 1RM strength standards across dozens of exercises using age, weight, sex, and height. Includes Beginner → Athlete tiers and working-weight tables."
+      content="Stop guessing and start training with intent. Estimate your one-rep max targets, compare your current numbers, and get actionable working weights instantly."
     />
 
     <!-- Tailwind via CDN (embed-friendly) -->
@@ -72,15 +72,6 @@
         opacity: 0.95;
       }
 
-      .kbd {
-        border: 1px solid rgba(7, 31, 53, 0.15);
-        border-bottom-width: 3px;
-        border-radius: 10px;
-        padding: 2px 8px;
-        font-size: 12px;
-        font-weight: 800;
-        background: white;
-      }
 
       /* Print mode */
       @media print {
@@ -117,15 +108,20 @@
                 </div>
                 <div class="flex flex-col">
                   <p class="text-xs sm:text-sm tracking-[0.28em] uppercase font-brand opacity-60">Chasing Change</p>
-                  <h1 class="mt-1 text-2xl sm:text-3xl font-extrabold font-heading leading-tight">1RM Standards Calculator</h1>
-                  <p class="text-sm opacity-75 mt-1">Age + weight + sex + height → tier targets for tons of lifts</p>
+                  <h1 class="mt-1 text-2xl sm:text-3xl font-extrabold font-heading leading-tight">1 Rep Max Calculator</h1>
+                  <p class="text-sm opacity-80 mt-1">Stop guessing. Pick a lift, see your target numbers, and train with a plan that moves the needle.</p>
                 </div>
               </div>
 
               <div class="flex flex-wrap gap-2 items-center">
-                <span class="badge" title="Quick tip">
-                  <span aria-hidden="true">⌘</span> + <span class="kbd">P</span> to print
-                </span>
+                <a
+                  href="https://tally.so/r/w5JXKE"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="inline-flex items-center justify-center rounded-2xl px-4 py-3 text-sm font-extrabold bg-cc-outline text-cc-text hover:opacity-90 transition shadow-outline"
+                >
+                  Want this dialed in? Apply for coaching →
+                </a>
                 <button
                   id="resetBtn"
                   class="px-5 py-3 rounded-2xl bg-cc-text text-white shadow-soft font-extrabold hover:opacity-95 transition"
@@ -150,7 +146,7 @@
                   This generates “what you should be able to do” targets by tier, plus working weights.
                 </p>
               </div>
-              <span class="badge">lbs</span>
+              
             </div>
           </div>
 
@@ -264,7 +260,7 @@
                   Search an exercise, or use the categories. Then you’ll see tier targets + working weights.
                 </p>
               </div>
-              <div class="flex gap-2"><span id="sexFactorBadge" class="badge">Sex factor: —</span></div>
+              <div class="flex gap-2"><span id="sexFactorBadge" class="badge bg-cc-outline/25 border-cc-outline/50 text-cc-text font-extrabold">Sex factor: —</span></div>
             </div>
           </div>
 
@@ -306,7 +302,7 @@
                     Enter your weight + reps to estimate your current 1RM (Epley / Brzycki average) and compare.
                   </div>
                 </div>
-                <span id="current1rmBadge" class="badge">Current 1RM: —</span>
+                <span id="current1rmBadge" class="badge bg-cc-outline/25 border-cc-outline/50 text-cc-text font-extrabold">Current 1RM: —</span>
               </div>
 
               <div class="mt-3 grid sm:grid-cols-3 gap-3">
@@ -415,6 +411,15 @@
         <footer class="mt-6 text-center text-sm opacity-60">
           Built for Chasing Change — print-friendly, coach-friendly.
         </footer>
+
+        <a
+          href="https://tally.so/r/w5JXKE"
+          target="_blank"
+          rel="noreferrer"
+          class="mt-5 inline-flex w-full items-center justify-center rounded-2xl px-4 py-4 text-sm font-extrabold bg-cc-text text-white hover:opacity-95 transition shadow-soft"
+        >
+          Want this dialed in? Apply for coaching →
+        </a>
       </main>
     </div>
 
